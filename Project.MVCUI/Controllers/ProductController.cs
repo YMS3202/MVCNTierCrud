@@ -87,9 +87,6 @@ namespace Project.MVCUI.Controllers
                 ProductAttributes = id == null ? _parep.GetActives() : _parep.Where(x => x.ProductID == id),
                 Products = _prep.GetActives()
 
-
-
-
             };
 
             return View(pvm);
