@@ -9,6 +9,10 @@ namespace Project.MAP.Options
 {
     public class ProductMap:BaseMap<Product>
     {
-       
+        public ProductMap()
+        {
+            Property(x => x.CategoryID).IsOptional();
+           
+        }
     }
 }

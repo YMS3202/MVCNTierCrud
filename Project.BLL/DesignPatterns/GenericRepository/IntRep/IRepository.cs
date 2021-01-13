@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Project.BLL.DesignPatterns.GenericRepository.IntRep
 {
-    public abstract interface IRepository<T> where T:BaseEntity
+    public interface IRepository<T> where T:BaseEntity
     {
 
         //List Commands

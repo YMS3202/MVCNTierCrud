@@ -25,9 +25,9 @@ namespace Project.DAL.Context
         }
 
         public DbSet<Product> Products { get; set; }
-        public DbSet<ENTITIES.Models.PAttribute> Attributes { get; set; }
+        public DbSet<PAttribute> Attributes { get; set; }
         public DbSet<ProductAttribute> ProductAttributes { get; set; }
-        public DbSet<ENTITIES.Models.Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
 

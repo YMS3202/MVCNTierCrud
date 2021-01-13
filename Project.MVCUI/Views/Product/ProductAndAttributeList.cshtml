@@ -1,0 +1,65 @@
+﻿@model ProductVM
+@{
+    ViewBag.Title = "ProductAndAttributeList";
+}
+
+<h2>ProductAndAttributeList</h2>
+<div class="container">
+    <div class="col-md-6">
+        <table class="table table-hover;table jumbotron">
+            <thead style="color:red">
+                <tr>
+                    <th>Product Name</th>
+                </tr>
+
+
+            </thead>
+            <tbody>
+                @foreach (var p in Model.Products)
+                {
+
+                    <tr>
+                        <td>@Html.ActionLink($"{p.Name}", "ProductAndAttributeList", new { id = p.ID }, new { @class = "btn btn-primary" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <input type="submit" class="btn btn-link" value="<<admin panel" onclick="location.href='@Url.Action("AdminPanel", "Product")'" /><br />
+    </div>
+    <div>
+
+    </div>
+    <div class="container">
+        <div class="col-md-6">
+            <table class="table table-hover;table jumbotron">
+                <thead style="color:red">
+                    <tr>
+                        <th>Attributes</th>
+                    </tr>
+
+
+                </thead>
+                <tbody>
+                    @if (Model.ProductAttributes.Count == 0)
+                    {
+                        <tr>
+                            <td style="color:red">attribute not found</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var a in Model.ProductAttributes)
+                        {
+
+                            <tr>
+                                <td style="color:blue">@a.Attribute.Name</td>
+                            </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>

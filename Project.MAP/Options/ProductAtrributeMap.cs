@@ -17,6 +17,8 @@ namespace Project.MAP.Options
                x.ProductID,
                x.AttributeID
             });
+
+
         }
     }
 }

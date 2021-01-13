@@ -12,7 +12,7 @@ namespace Project.ENTITIES.Models
         public string Name { get; set; }
         public decimal UnitPrice { get; set; }
         public int UnitsInStock { get; set; }
-        public int CategoryID { get; set; }
+        public int? CategoryID { get; set; }
 
 
         //relational properties

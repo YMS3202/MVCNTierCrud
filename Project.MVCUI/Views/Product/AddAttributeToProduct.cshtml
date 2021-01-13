@@ -1,0 +1,27 @@
+﻿@model ProductVM
+@{
+    ViewBag.Title = "AddAttributeToProduct";
+}
+
+<h4>Add Attribute To Product</h4>
+
+@using (Html.BeginForm("AddAttributeToProduct", "Product", FormMethod.Post))
+{
+    <div>
+        @Html.DropDownListFor(x => x.ProductAttribute.ProductID, new SelectList(Model.Products, "ID", "Name"), "Select Product", new { @class = "form-control" })
+    </div>
+    <br />
+ 
+    <div>
+        @Html.DropDownListFor(x => x.ProductAttribute.AttributeID, new SelectList(Model.Attributes, "ID", "Name"), "Select Attribute", new { @class = "form-control" })<br />
+    </div>
+    <button>Add</button>
+
+
+
+}
+
+<div>
+    <input type="submit" class="btn btn-link" value="<<admin panel" onclick="location.href='@Url.Action("AdminPanel", "Product")'" /><br />
+</div>
+

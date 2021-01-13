@@ -1,0 +1,23 @@
+﻿@model ProductVM
+@{
+    ViewBag.Title = "AddAttribute";
+}
+
+<h4>Add New Attribute</h4>
+@using (Html.BeginForm("AddAttribute", "Product", FormMethod.Post))
+{
+    <div>
+        @Html.TextBoxFor(x => x.Attribute.Name, new { placeholder = "attribute name" });<br /><br />
+    </div>
+    <div>
+        <button>Add Attribute</button>
+    </div>
+
+    <br />
+
+}
+
+<div>
+    <input type="submit" class="btn btn-link" value="<<admin panel" onclick="location.href='@Url.Action("AdminPanel", "Product")'" /><br />
+</div>
+

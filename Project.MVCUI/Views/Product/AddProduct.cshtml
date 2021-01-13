@@ -1,0 +1,30 @@
+﻿@model ProductVM
+@{
+    ViewBag.Title = "AddProduct";
+}
+<h4>ADD NEW PRODUCT</h4>
+@using (Html.BeginForm("AddProduct", "Product", FormMethod.Post))
+{
+    <div>
+        @Html.TextBoxFor(x => x.Product.Name, new { placeholder = "product name" });<br /><br />
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Product.UnitPrice, new { placeholder = "price" });<br /><br />
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Product.UnitsInStock, new { placeholder = "stock" });<br /><br />
+    </div>
+    <button>Add Product</button>
+ <br />
+
+}
+
+
+
+
+<div>
+    <input type="submit" class="btn btn-link" value="<<admin panel" onclick="location.href='@Url.Action("AdminPanel", "Product")'" /><br />
+</div>
+
+
+
